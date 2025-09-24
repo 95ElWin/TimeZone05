@@ -1,0 +1,38 @@
+.container{
+    width: 60%;
+    height: 100%;
+    margin: 0px auto;
+    padding: 0px 12px;
+}
+.btn{
+    display: inline-block;
+    padding: 16px 24px;
+    border: 1px solid;
+    text-transform: uppercase;
+    font-size: 16px;
+    background-color: #4a4a4b;
+    color: white;
+    font-weight: 500;
+    border-radius: 2px;
+    position: relative;
+    z-index: 1;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 0px;
+    height: 100%;
+    z-index: -1;
+    background: var(--red-500);
+    transition: 0.5s;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+.btn:hover::before{
+    width: 100%;
+}
+.btn span{
+    position: relative;
+    z-index: 1;
+}
