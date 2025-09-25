@@ -114,6 +114,8 @@ header .dropdown-element .dropdown-title {
 .banner {
   height: 100vh;
   background-color: #f0f0f2;
+  overflow: hidden;
+  line-height: 1.2;
 }
 .banner-row {
   display: flex;
@@ -125,7 +127,7 @@ header .dropdown-element .dropdown-title {
 .banner-row img {
   position: absolute;
   top: 0px;
-  right: 0px;
+  right: 95px;
   transform: translateX(50%);
 }
 .banner-text h1 {
@@ -139,7 +141,10 @@ header .dropdown-element .dropdown-title {
   font-size: 17px;
   color: #202025;
   margin: 50px 0px;
+  padding-right: 111px;
+  line-height: 1.6;
 }
+
 @media screen and (max-width: 576px) {
   .container {
     width: 90%;
@@ -250,4 +255,39 @@ header .dropdown-element .dropdown-title {
   header ul .dropdown-element i {
     display: none;
   }
+}
+
+/* New Product Section */
+.new-product-section {
+  padding: 200px 0px 170px;
+}
+
+.new-product-section h2 {
+  text-align: left;
+  margin-bottom: 70px;
+  font-size: 48px;
+}
+
+.new-product-images {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  overflow: hidden; /* Ensure zoom doesn't break layout */
+}
+
+.new-product-images .product-image {
+  overflow: hidden; /* Hide the overflowing part of the image */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.new-product-images img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease; /* Smooth zoom transition */
+}
+
+.new-product-images .product-image:hover img {
+  transform: scale(1.1); /* Zoom in on hover */
 }
