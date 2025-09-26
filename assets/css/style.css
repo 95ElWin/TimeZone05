@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 :root {
   --red-500: #ff2020;
+  --black-400: #444444;
 }
 body {
   font-family: "Josefin Sans", sans-serif;
+  line-height: 1.5;
 }
 header {
   padding: 0px;
@@ -279,6 +281,7 @@ header .dropdown-element .dropdown-title {
   overflow: hidden; /* Hide the overflowing part of the image */
   border: 1px solid #ddd;
   border-radius: 5px;
+  margin-bottom: 30px;
 }
 
 .new-product-images img {
@@ -290,4 +293,23 @@ header .dropdown-element .dropdown-title {
 
 .new-product-images .product-image:hover img {
   transform: scale(1.1); /* Zoom in on hover */
+}
+.single-new-pro{
+  text-align: center;
+  margin-bottom: 30px;
+}
+.single-new-pro h3 a{
+  color: var(--black-400);
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+.single-new-pro h3{
+  margin: 0px 0px 8px;
+}
+.single-new-pro .product-info span {
+  color: var(--red-500);
+  font-size: 18px;
+  font-weight: 500;
+  display: block;
 }
