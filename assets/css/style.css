@@ -313,3 +313,72 @@ header .dropdown-element .dropdown-title {
   font-weight: 500;
   display: block;
 }
+
+/* Gallery Area Section */
+.gallery-area {
+  padding: 0px;
+}
+
+.gallery-row {
+  display: flex;
+}
+
+.single-gallery-lg {
+  width: 50%;
+  padding-right: 15px;
+  height: 690px;
+}
+
+.single-gallery-md {
+  width: 25%;
+  padding: 0 15px;
+  height: 690px;
+}
+
+.single-gallery {
+  height: 330px;
+  overflow: hidden;
+  position: relative;
+}
+
+.single-gallery::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.single-gallery:hover::before {
+  opacity: 1;
+}
+
+.gallery-row-sm {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  gap: 30px;
+}
+
+.gallery-img {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+  transition: transform 0.3s ease;
+}
+
+.single-gallery:hover .gallery-img {
+  transform: scale(1.05);
+}
+
+.gallery-row-sm .gallery-img {
+  height: 100%;
+  min-height: 150px;
+}
