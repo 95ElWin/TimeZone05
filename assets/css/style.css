@@ -294,17 +294,17 @@ header .dropdown-element .dropdown-title {
 .new-product-images .product-image:hover img {
   transform: scale(1.1); /* Zoom in on hover */
 }
-.single-new-pro{
+.single-new-pro {
   text-align: center;
   margin-bottom: 30px;
 }
-.single-new-pro h3 a{
+.single-new-pro h3 a {
   color: var(--black-400);
   font-weight: 700;
   font-size: 24px;
   margin-bottom: 12px;
 }
-.single-new-pro h3{
+.single-new-pro h3 {
   margin: 0px 0px 8px;
 }
 .single-new-pro .product-info span {
@@ -381,4 +381,106 @@ header .dropdown-element .dropdown-title {
 .gallery-row-sm .gallery-img {
   height: 100%;
   min-height: 150px;
+}
+/* Popular Items Section */
+.popular-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.popular-items {
+  padding: 200px 0px 170px;
+}
+.section-title h2 {
+  color: #000;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.section-title p {
+  font-family: "Roboto", sans-serif;
+  color: #777;
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 15px;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+.popular-items .section-title {
+  max-width: 58.333333%;
+  margin: auto;
+  margin-bottom: 70px;
+  text-align: center;
+}
+.single-popular-item {
+  max-width: 33.333333%;
+  padding: 0px 15px;
+  margin-bottom: 50px;
+}
+.single-popular-item .popular-img {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 3px solid #ff2020;
+  margin-bottom: 19px;
+}
+
+.single-popular-item .img-cap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -20%;
+  height: 15%;
+  background: var(--red-500, #ff2020);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: bottom 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 18px;
+  font-weight: 600;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.single-popular-item .popular-img:hover .img-cap {
+  bottom: 0;
+  opacity: 1;
+  pointer-events: auto;
+}
+.popular-info h3 a {
+  display: block;
+  text-align: center;
+  color: var(--black-400);
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.popular-info span {
+  text-align: center;
+  color: #444444;
+  font-size: 18px;
+  font-weight: 500;
+  display: block;
+}
+.favorit-items {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 32px; /* ölçü artırıldı */
+  color: var(--black-400);
+  cursor: pointer;
+  /* İçi boş ürək üçün font və ya ikon istifadə edin */
+}
+
+.single-popular-item:hover .favorit-items {
+  opacity: 1;
 }
