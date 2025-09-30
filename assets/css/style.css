@@ -484,3 +484,10 @@ header .dropdown-element .dropdown-title {
 .single-popular-item:hover .favorit-items {
   opacity: 1;
 }
+.room-btn-parent {
+  display: flex;
+  justify-content: center;
+}
+.room-btn {
+  padding-top: 70px;
+}
