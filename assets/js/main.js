@@ -67,3 +67,26 @@ window.addEventListener("resize", () => {
     nav.classList.remove("active");
   }
 });
+
+document.querySelector(".play-btn a").addEventListener("click", function (e) {
+  e.preventDefault();
+  document.getElementById("video-modal").classList.add("active");
+  document.getElementById("youtube-frame").src = this.href.replace(
+    "youtu.be/",
+    "www.youtube.com/embed/"
+  );
+});
+document
+  .querySelector(".video-modal-close")
+  .addEventListener("click", function () {
+    document.getElementById("video-modal").classList.remove("active");
+    document.getElementById("youtube-frame").src = "";
+  });
+
+// Modal fonuna klik zamanı bağlamaq
+document.getElementById("video-modal").addEventListener("click", function (e) {
+  if (e.target === this) {
+    this.classList.remove("active");
+    document.getElementById("youtube-frame").src = "";
+  }
+});
