@@ -1,14 +1,28 @@
+/* Font & Variables */
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 :root {
   --red-500: #ff2020;
   --black-400: #444444;
 }
+
+/* General Styles */
 body {
   font-family: "Josefin Sans", sans-serif;
   line-height: 1.5;
 }
+p {
+  font-family: "Roboto", sans-serif !important;
+  color: #777;
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 15px;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Header */
 header {
-  padding: 0px;
+  padding: 0;
   background-color: white;
 }
 header .toggle {
@@ -16,7 +30,7 @@ header .toggle {
 }
 header .head-inner {
   width: 85%;
-  margin: 0px auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,14 +40,14 @@ header .navbar {
   column-gap: 36px;
 }
 header .navbar > li {
-  padding: 40px 0px;
+  padding: 40px 0;
 }
 header .navbar a,
 header .navbar > li {
   font-size: 16px;
   color: #141517;
   font-weight: 600;
-  transition: 0.3s color;
+  transition: color 0.3s;
 }
 header .navbar a:hover,
 header .navbar > li:hover {
@@ -88,7 +102,7 @@ header .dropdown {
 header .dropdown::before {
   content: "";
   position: absolute;
-  top: 0px;
+  top: 0;
   transform: translateY(-101%);
   border: 8px solid transparent;
   border-bottom-color: var(--red-500);
@@ -97,7 +111,7 @@ header .navbar > li .status {
   display: inline-block;
   position: absolute;
   top: 20px;
-  right: 0px;
+  right: 0;
   transform: translateX(50%);
   padding: 4px 8px;
   color: white;
@@ -108,10 +122,11 @@ header .navbar > li .status {
   border-radius: 6px;
 }
 header .dropdown-element .dropdown-title {
-  padding: 40px 0px;
+  padding: 40px 0;
   display: flex;
   align-items: center;
 }
+
 /*------------------BANNER-------------------------*/
 .banner {
   height: 100vh;
@@ -128,25 +143,26 @@ header .dropdown-element .dropdown-title {
 }
 .banner-row img {
   position: absolute;
-  top: 0px;
+  top: 0;
   right: 95px;
   transform: translateX(50%);
+}
+.banner-text {
+  width: 75%;
 }
 .banner-text h1 {
   font-size: 96px;
   color: #0b1c39;
 }
-.banner-text {
-  width: 75%;
-}
 .banner-text p {
   font-size: 17px;
   color: #202025;
-  margin: 50px 0px;
+  margin: 50px 0;
   padding-right: 111px;
   line-height: 1.6;
 }
 
+/* Responsive Banner */
 @media screen and (max-width: 576px) {
   .container {
     width: 90%;
@@ -167,7 +183,7 @@ header .dropdown-element .dropdown-title {
 }
 @media screen and (max-width: 900px) {
   header {
-    padding: 30px 0px;
+    padding: 30px 0;
     position: relative;
   }
   header nav {
@@ -192,7 +208,7 @@ header .dropdown-element .dropdown-title {
     flex-direction: column;
   }
   header .navbar > li {
-    padding: 10px 0px;
+    padding: 10px 0;
   }
   header .toggle {
     display: inline-block;
@@ -208,7 +224,6 @@ header .dropdown-element .dropdown-title {
   header .navbar > li .status {
     display: none;
   }
-  /* Mobil üçün dropdown animasiya və stil */
   header .dropdown {
     max-height: 0;
     overflow: hidden;
@@ -231,7 +246,7 @@ header .dropdown-element .dropdown-title {
   }
   header ul .dropdown-element i {
     position: absolute;
-    right: 0px;
+    right: 0;
     top: 10px;
     cursor: pointer;
     font-size: 18px;
@@ -245,7 +260,7 @@ header .dropdown-element .dropdown-title {
     display: none;
   }
   header .dropdown-element .dropdown-title {
-    padding: 0px;
+    padding: 0;
   }
   header ul .dropdown-element {
     flex-direction: column;
@@ -261,38 +276,33 @@ header .dropdown-element .dropdown-title {
 
 /* New Product Section */
 .new-product-section {
-  padding: 200px 0px 170px;
+  padding: 200px 0 170px;
 }
-
 .new-product-section h2 {
   text-align: left;
   margin-bottom: 70px;
   font-size: 48px;
 }
-
 .new-product-images {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  overflow: hidden; /* Ensure zoom doesn't break layout */
+  overflow: hidden;
 }
-
 .new-product-images .product-image {
-  overflow: hidden; /* Hide the overflowing part of the image */
+  overflow: hidden;
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-bottom: 30px;
 }
-
 .new-product-images img {
   width: 100%;
   height: auto;
   display: block;
-  transition: transform 0.4s ease; /* Smooth zoom transition */
+  transition: transform 0.4s ease;
 }
-
 .new-product-images .product-image:hover img {
-  transform: scale(1.1); /* Zoom in on hover */
+  transform: scale(1.1);
 }
 .single-new-pro {
   text-align: center;
@@ -305,7 +315,7 @@ header .dropdown-element .dropdown-title {
   margin-bottom: 12px;
 }
 .single-new-pro h3 {
-  margin: 0px 0px 8px;
+  margin: 0 0 8px;
 }
 .single-new-pro .product-info span {
   color: var(--red-500);
@@ -316,31 +326,26 @@ header .dropdown-element .dropdown-title {
 
 /* Gallery Area Section */
 .gallery-area {
-  padding: 0px;
+  padding: 0;
 }
-
 .gallery-row {
   display: flex;
 }
-
 .single-gallery-lg {
   width: 50%;
   padding-right: 15px;
   height: 690px;
 }
-
 .single-gallery-md {
   width: 25%;
   padding: 0 15px;
   height: 690px;
 }
-
 .single-gallery {
   height: 330px;
   overflow: hidden;
   position: relative;
 }
-
 .single-gallery::before {
   content: "";
   position: absolute;
@@ -353,11 +358,9 @@ header .dropdown-element .dropdown-title {
   transition: opacity 0.3s ease;
   z-index: 1;
 }
-
 .single-gallery:hover::before {
   opacity: 1;
 }
-
 .gallery-row-sm {
   width: 25%;
   display: flex;
@@ -365,7 +368,6 @@ header .dropdown-element .dropdown-title {
   padding-left: 15px;
   gap: 30px;
 }
-
 .gallery-img {
   height: 100%;
   background-size: cover;
@@ -373,26 +375,23 @@ header .dropdown-element .dropdown-title {
   min-height: 300px;
   transition: transform 0.3s ease;
 }
-
 .single-gallery:hover .gallery-img {
   transform: scale(1.05);
 }
-
 .gallery-row-sm .gallery-img {
   height: 100%;
   min-height: 150px;
 }
+
 /* Popular Items Section */
 .popular-row {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
 }
 .popular-items {
-  padding: 200px 0px 170px;
+  padding: 200px 0 170px;
 }
 .section-title h2 {
   color: #000;
@@ -408,7 +407,6 @@ header .dropdown-element .dropdown-title {
   line-height: 30px;
   margin-bottom: 15px;
   font-weight: normal;
-  margin-bottom: 15px;
 }
 .popular-items .section-title {
   max-width: 58.333333%;
@@ -418,7 +416,7 @@ header .dropdown-element .dropdown-title {
 }
 .single-popular-item {
   max-width: 33.333333%;
-  padding: 0px 15px;
+  padding: 0 15px;
   margin-bottom: 50px;
 }
 .single-popular-item .popular-img {
@@ -427,7 +425,6 @@ header .dropdown-element .dropdown-title {
   border-bottom: 3px solid #ff2020;
   margin-bottom: 19px;
 }
-
 .single-popular-item .img-cap {
   position: absolute;
   left: 0;
@@ -447,7 +444,6 @@ header .dropdown-element .dropdown-title {
   z-index: 2;
   pointer-events: none;
 }
-
 .single-popular-item .popular-img:hover .img-cap {
   bottom: 0;
   opacity: 1;
@@ -475,12 +471,10 @@ header .dropdown-element .dropdown-title {
   z-index: 3;
   opacity: 0;
   transition: opacity 0.3s;
-  font-size: 32px; /* ölçü artırıldı */
+  font-size: 32px;
   color: var(--black-400);
   cursor: pointer;
-  /* İçi boş ürək üçün font və ya ikon istifadə edin */
 }
-
 .single-popular-item:hover .favorit-items {
   opacity: 1;
 }
@@ -491,6 +485,7 @@ header .dropdown-element .dropdown-title {
 .room-btn {
   padding-top: 70px;
 }
+
 /* Video Area Section */
 .video-area {
   background-image: url(../images/video/sectin_bg1.png);
@@ -513,11 +508,10 @@ header .dropdown-element .dropdown-title {
   background-color: rgba(2, 5, 12, 0.5);
   opacity: 0;
   z-index: 0;
-  -webkit-transition: all 0.4s ease-out 0s;
-  -moz-transition: all 0.4s ease-out 0s;
-  -ms-transition: all 0.4s ease-out 0s;
-  -o-transition: all 0.4s ease-out 0s;
   transition: all 0.4s ease-out 0s;
+}
+.video-area:hover::before {
+  opacity: 1;
 }
 .container-fluid {
   width: 100%;
@@ -527,9 +521,7 @@ header .dropdown-element .dropdown-title {
   margin-left: auto;
 }
 .row-video {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
@@ -555,117 +547,22 @@ header .dropdown-element .dropdown-title {
   border: 1px solid #fff;
   background: transparent;
   transition: transform 0.3s, box-shadow 0.3s;
-  padding: 0; /* padding-i silin */
-  line-height: normal; /* line-height-i silin və ya normal edin */
+  padding: 0;
+  line-height: normal;
 }
-
 .video-area:hover .play-btn a {
   transform: scale(1.15);
   box-shadow: 0px 12px 24px 0px rgba(0, 0, 0, 0.3);
 }
-
-.video-area:hover::before {
-  opacity: 1;
-}
-.video-area .fas {
-  font-weight: 900;
-  font-family: Font Awesome\5 Free;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-}
-.fa-play:before {
-  content: "\f04b";
-}
-/* Arrow */
-.thumb-content-box {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  z-index: 2;
-  width: 34%;
-  background: #ff2020; /* qırmızı background */
-}
-.thumb-content-box .thumb-content {
-  position: absolute;
-  bottom: 0;
-  align-items: end;
-  background-image: url(../images/video/vidoe_more.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: space-between;
-  padding: 60px 143px 60px 80px;
-  width: 100%;
-  line-height: 1;
-}
-.thumb-content-box .thumb-content h3 {
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 16px;
-  margin: 0;
-  text-transform: uppercase;
-}
-.thumb-content-box .thumb-content a {
-  color: #fff;
-  display: block;
-  position: relative;
-  right: -34px;
-  top: 5px;
-  font-size: 30px;
-}
-.thumb-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.thumb-content h3 {
-  margin: 0;
-  font-size: 16px;
-  color: #fff;
-  font-weight: 600;
-}
-.flaticon-arrow:before {
-  content: "\f104";
-}
-a.popup-video {
-  display: inline-block;
-  position: relative;
-  color: #fff;
-  font-size: 24px;
-  margin-top: 20px;
-  transition: transform 0.3s;
-}
-
-a.popup-video:hover {
-  transform: scale(1.1);
-}
-
-a.popup-video i {
-  display: block;
-  font-size: 36px;
-  margin-right: -5px;
-}
-
-a.popup-video span {
-  display: block;
-  font-size: 14px;
-  text-align: center;
-}
-
 .video-area .play-btn a:hover {
-  background: #fff; /* fon ağ */
-  color: #ff2020; /* play işarəsi qırmızı */
+  background: #fff;
+  color: #ff2020;
+}
+.video-area .play-btn a:hover i {
+  color: #ff2020;
 }
 
-.video-area .play-btn a:hover i {
-  color: #ff2020; /* play işarəsi qırmızı */
-}
+/* Video Modal */
 .video-modal {
   display: none;
   position: fixed;
@@ -705,13 +602,104 @@ a.popup-video span {
 .video-modal-close {
   position: absolute;
   top: -45px;
-  right: 0px;
+  right: 0;
   font-size: 40px;
   color: #333;
   cursor: pointer;
   z-index: 2;
+  transition: color 0.2s;
 }
 .video-modal-close:hover {
   color: #fff;
-  transition: color 0.2s;
+}
+
+/* Arrow & Thumb Content */
+.thumb-content-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  width: 34%;
+  background: #ff2020;
+}
+.thumb-content-box .thumb-content {
+  position: absolute;
+  bottom: 0;
+  align-items: end;
+  background-image: url(../images/video/vidoe_more.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 143px 60px 80px;
+  width: 100%;
+  line-height: 1;
+}
+.thumb-content-box .thumb-content h3,
+.thumb-content h3 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0;
+  text-transform: uppercase;
+}
+.thumb-content-box .thumb-content a {
+  color: #fff;
+  display: block;
+  position: relative;
+  right: -34px;
+  top: 5px;
+  font-size: 30px;
+}
+.thumb-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Watch-Area Section */
+.watch-area {
+  padding-top: 200px;
+  padding-bottom: 170px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.watch-area .row {
+  justify-content: space-between;
+  align-items: center;
+}
+.watch-area .row > div {
+  flex: 0 0 41%;
+}
+@media (max-width: 900px) {
+  .watch-area .row > div {
+    flex: 0 0 100%;
+    margin-bottom: 24px;
+  }
+}
+.watch-area .watch-details h2 {
+  color: #000;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+.watch-area .watch-details p {
+  margin-bottom: 50px;
+  font-size: 17px;
+}
+.watch-area .choice-watch-img img {
+  width: 100%;
+}
+
+/* Utility Classes */
+.padding-130 {
+  padding-bottom: 130px;
+}
+.p-15 {
+  padding: 0 15px;
 }

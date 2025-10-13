@@ -68,6 +68,7 @@ window.addEventListener("resize", () => {
   }
 });
 
+// Play düyməsinə klik zamanı modal açılır
 document.querySelector(".play-btn a").addEventListener("click", function (e) {
   e.preventDefault();
   document.getElementById("video-modal").classList.add("active");
@@ -76,6 +77,8 @@ document.querySelector(".play-btn a").addEventListener("click", function (e) {
     "www.youtube.com/embed/"
   );
 });
+
+// Modalı bağlamaq üçün close işarəsi
 document
   .querySelector(".video-modal-close")
   .addEventListener("click", function () {
