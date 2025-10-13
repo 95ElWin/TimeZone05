@@ -649,7 +649,7 @@ a.popup-video:hover {
 a.popup-video i {
   display: block;
   font-size: 36px;
-  margin-bottom: 8px;
+  margin-right: -5px;
 }
 
 a.popup-video span {
