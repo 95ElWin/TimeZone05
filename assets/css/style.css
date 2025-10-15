@@ -703,3 +703,46 @@ header .dropdown-element .dropdown-title {
 .p-15 {
   padding: 0 15px;
 }
+/* Shop Method Area */
+.shop-method-area .method-wrapper {
+  background: #ea0000;
+}
+.shop-method-area .method-wrapper .row{
+  display: flex !important;
+  justify-content: space-between !important;
+}
+.shop-method-area .method-wrapper .single-method {
+  padding: 43px 20px 0 45px;
+  margin-bottom: 40px;
+  -ms-flex: 0 0 33.333333%;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+.shop-method-area .method-wrapper .single-method i {
+  font-size: 40px;
+  color: #ffff;
+  margin-bottom: 25px;
+  display: block;
+}
+.ti-package:before {
+  content: "\e687";
+}
+.ti-unlock:before {
+  content: "\e603";
+}
+.ti-reload:before {
+  content: "\e619";
+}
+.shop-method-area .method-wrapper .single-method h6 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  font-family: "Roboto", sans-serif;
+}
+.shop-method-area .method-wrapper .single-method p {
+  font-size: 16px;
+  color: #d3d1d1;
+  max-width: 95%;
+}
