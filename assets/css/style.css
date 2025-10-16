@@ -746,3 +746,101 @@ header .dropdown-element .dropdown-title {
   color: #d3d1d1;
   max-width: 95%;
 }
+/* Footer */
+.footer-padding {
+  padding-top: 150px;
+  padding-bottom: 120px;
+}
+.footer-area .row {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+.single-footer-caption {
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+  margin-bottom: 50px;
+}
+.footer-area .footer-logo {
+  margin-bottom: 40px;
+}
+.footer-area .footer-pera p {
+  color: #868c98;
+  font-size: 16px;
+  margin-bottom: 50px;
+  line-height: 1.8;
+}
+.footer-area .footer-tittle h4 {
+  color: #000;
+  font-size: 20px;
+  margin-bottom: 29px;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+}
+.footer-area .footer-tittle ul li {
+  color: #012f5f;
+  margin-bottom: 15px;
+}
+.footer-area .footer-tittle ul li a {
+  color: #868c98;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+}
+/* footer bottom */
+.align-items-center {
+  -ms-flex-align: center!important;
+  align-items: center !important;
+}
+.footer-copy-right {
+  padding-top: 50px;
+}
+.footer-copy-right p {
+  color: #888888;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 2;
+  margin-bottom: 20px;
+}
+.footer-copy-right p i {
+  color: #ff2020;
+}
+.fa-heart:before {
+  content: "\f004";
+}
+.footer-copy-right p a {
+  color: #ff2020;
+}
+.f-right {
+  float: right;
+}
+.footer-social a i {
+  color: #222222;
+  font-size: 14px;
+  padding: 5px 10px;
+  -webkit-transition: all .4s 
+ease-out 0s;
+  -moz-transition: all .4s ease-out 0s;
+  -ms-transition: all .4s ease-out 0s;
+  -o-transition: all .4s ease-out 0s;
+  transition: all .4s 
+ease-out 0s;
+  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+}
+.fa-twitter:before {
+  content: "\f099";
+}
+.fa-facebook-f:before {
+  content: "\f39e";
+}
+.fa-behance:before {
+  content: "\f1b4";
+}
+.fa-globe:before {
+  content: "\f0ac";
+}
+/* Scroll Up */
